@@ -1,7 +1,14 @@
 package com.ryo.film;
 
+import java.io.IOException;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.ryo.film.service.RegisterService;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JsonProcessingException, IOException {
         System.out.println("Hello world!");
+        RegisterService register = new RegisterService();
+        register.register();
     }
 }

@@ -9,10 +9,10 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class registerAssets {
+public class RegisterAssets {
     public List<String> names() throws JsonProcessingException, IOException {
         List<String> name = new ArrayList<>();
-        String path = "/src/main/java/com/ryo/film/json/names.json";
+        String path = "src/main/java/com/ryo/film/json/names.json";
 
         ObjectMapper objectMapper = new ObjectMapper();
         File file = new File(path);
