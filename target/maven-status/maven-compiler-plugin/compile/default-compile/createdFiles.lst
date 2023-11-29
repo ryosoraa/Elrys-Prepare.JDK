@@ -1,0 +1,11 @@
+com\ryo\film\model\register\AdditionalInfo.class
+com\ryo\film\model\register\RegisterModel.class
+com\ryo\film\model\register\Address.class
+com\ryo\film\service\RegisterService.class
+com\ryo\film\assets\RegisterAssets.class
+com\ryo\film\Main.class
+com\ryo\film\model\register\AdditionalInfo$AdditionalInfoBuilder.class
+com\ryo\film\api\JerseyClient.class
+com\ryo\film\model\register\Address$AddressBuilder.class
+com\ryo\film\utils\Dates.class
+com\ryo\film\model\register\RegisterModel$RegisterModelBuilder.class

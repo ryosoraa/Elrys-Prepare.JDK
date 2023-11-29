@@ -10,8 +10,6 @@ public class Main {
     public static void main(String[] args) throws JsonProcessingException, IOException {
         System.out.println("Hello world!");
         RegisterService register = new RegisterService();
-        // register.register();
-        Dates dates = new Dates();
-        dates.random();
+        register.register();
     }
 }

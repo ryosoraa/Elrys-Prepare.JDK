@@ -22,6 +22,7 @@ public class RegisterService {
     ObjectMapper mapper = new ObjectMapper();
     Dates dates = new Dates();
     Random random = new Random();
+    Boolean[] subs = { true, false };
 
     private String bodyUrl = "http://192.168.20.90:9200/elrys/_doc/";
 
@@ -43,9 +44,18 @@ public class RegisterService {
                                     .country(assets.country().get(random.nextInt(190)))
                                     .build())
                             .additional_info(AdditionalInfo.builder()
-                                .phone(random.nextInt(999999))
-                                .gender(email)
-                                .build())
+                                    .phone(random.nextInt(999999))
+                                    .gender(assets.gender().get(15))
+                                    .newsletter_subscription(subs[random.nextInt(1)])
+                                    .preference(assets.preferences())
+                                    .occupation(assets.occupations().get(random.nextInt(90)))
+                                    .degree(assets.degress().get(random.nextInt(36)))
+                                    .major(assets.majors().get(45))
+                                    .school(assets.schools().get(41))
+                                    .interests(assets.interests())
+                                    .skills(assets.skills())
+                                    .languages(assets.languages())
+                                    .build())
                             .build()));
             System.out.println(postRequest);
         }

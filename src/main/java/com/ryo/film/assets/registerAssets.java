@@ -4,12 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class RegisterAssets {
+    Random random = new Random();
+
     public List<String> names() throws JsonProcessingException, IOException {
         List<String> name = new ArrayList<>();
         String path = "src/main/java/com/ryo/film/json/names.json";
@@ -29,7 +32,7 @@ public class RegisterAssets {
 
     public List<String> citys() throws JsonProcessingException, IOException {
         List<String> citys = new ArrayList<>();
-        String path = "src/main/java/com/ryo/film/json/city.json";
+        String path = "src/main/java/com/ryo/film/json/citys.json";
 
         ObjectMapper objectMapper = new ObjectMapper();
         File file = new File(path);
@@ -80,6 +83,8 @@ public class RegisterAssets {
 
     public List<String> interests() throws JsonProcessingException, IOException {
         List<String> interests = new ArrayList<>();
+        List<String> results = new ArrayList<>();
+
         String path = "src/main/java/com/ryo/film/json/interests.json";
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -91,12 +96,17 @@ public class RegisterAssets {
             interests.add(data.asText());
         }
 
-        return interests;
+        for (int x = 0; x < random.nextInt(10); x++) {
+            results.add(interests.get(random.nextInt(66)));
+        }
+
+        return results;
 
     }
 
     public List<String> languages() throws JsonProcessingException, IOException {
         List<String> languages = new ArrayList<>();
+        List<String> results = new ArrayList<>();
         String path = "src/main/java/com/ryo/film/json/languages.json";
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -108,7 +118,11 @@ public class RegisterAssets {
             languages.add(data.asText());
         }
 
-        return languages;
+        for (int x = 0; x < random.nextInt(10); x++) {
+            results.add(languages.get(random.nextInt(65)));
+        }
+
+        return results;
 
     }
 
@@ -148,6 +162,8 @@ public class RegisterAssets {
 
     public List<String> preferences() throws JsonProcessingException, IOException {
         List<String> preferences = new ArrayList<>();
+        List<String> results = new ArrayList<>();
+
         String path = "src/main/java/com/ryo/film/json/preferences.json";
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -159,7 +175,11 @@ public class RegisterAssets {
             preferences.add(data.asText());
         }
 
-        return preferences;
+        for (int x = 0; x < random.nextInt(10); x++) {
+            results.add(preferences.get(random.nextInt(68)));
+        }
+
+        return results;
 
     }
 
@@ -182,6 +202,7 @@ public class RegisterAssets {
 
     public List<String> skills() throws JsonProcessingException, IOException {
         List<String> skills = new ArrayList<>();
+        List<String> results = new ArrayList<>();
         String path = "src/main/java/com/ryo/film/json/skills.json";
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -193,7 +214,11 @@ public class RegisterAssets {
             skills.add(data.asText());
         }
 
-        return skills;
+        for (int x = 0; x < random.nextInt(10); x++) {
+            results.add(skills.get(random.nextInt(73)));
+        }
+
+        return results;
 
     }
 
