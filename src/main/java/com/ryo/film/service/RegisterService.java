@@ -27,6 +27,9 @@ public class RegisterService {
                     RegisterModel.builder()
                             .email(email.toLowerCase().concat("@gmail.com"))
                             .password(email.toLowerCase())
+                            .username(email)
+                            .fullName(email)
+                            .dateOfBirth(email)
                             .build()));
             System.out.println(postRequest);
         }
