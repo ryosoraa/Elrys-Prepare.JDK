@@ -214,4 +214,21 @@ public class RegisterAssets {
 
     }
 
+    public List<String> gender() throws JsonProcessingException, IOException {
+        List<String> gender = new ArrayList<>();
+        String path = "src/main/java/com/ryo/film/json/gender.json";
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        File file = new File(path);
+
+        JsonNode read = objectMapper.readTree(file);
+
+        for (JsonNode data : read) {
+            gender.add(data.asText());
+        }
+
+        return gender;
+
+    }
+
 }

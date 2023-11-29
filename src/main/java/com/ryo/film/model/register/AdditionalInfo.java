@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Builder
 @Data
-class AdditionalInfo {
+public class AdditionalInfo {
 
     // Additional info
 
