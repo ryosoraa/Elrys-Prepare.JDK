@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ryo.film.api.JerseyClient;
 import com.ryo.film.assets.RegisterAssets;
-import com.ryo.film.model.RegisterModel;
+import com.ryo.film.model.register.RegisterModel;
 
 public class RegisterService {
 
