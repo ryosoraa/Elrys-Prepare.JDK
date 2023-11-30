@@ -33,7 +33,7 @@ public class FIlmService {
                             .type("film")
                             .title(filmAssets.title().get(random.nextInt(430)))
                             .director(filmAssets.directors().get(random.nextInt(180)))
-                            .release(dates.random())
+                            .release(String.valueOf(random.nextInt(1945) + 78))
                             .genre(filmAssets.genre())
                             .rating(random.nextInt(10))
                             .format(filmAssets.formats().get(random.nextInt(63)))
